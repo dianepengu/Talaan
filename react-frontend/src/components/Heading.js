@@ -1,50 +1,40 @@
 import './Main.css';
 
-import Logo from '../imgs/logo/light.png';
-import Shop from '../imgs/icons/shop.svg';
-import Sell from '../imgs/icons/sell.svg';
-import Cart from '../imgs/icons/cart.svg';
-import User from '../imgs/icons/user.svg'
+import Navbar from './Navbar';
+import ForPinoys from './ForPinoys';
+
+import Element1 from '../imgs/talaan_pic2.png'
+import LightPeng from '../imgs/logo/light.png'
+import RightArrow from '../imgs/icons/right_arrow.svg'
 
 export default function Heading(props) {
     return (
-        <div className="heading">
-            <nav className="navbar navbar-expand-lg">
-                <div className="container">
-                    <div className="d-flex justify-content-start">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <img src={Logo} className="logo" />
-                            </li>
-                            <li className="nav-item">
-                                <img src={Shop} alt="Left Nav Item 2" />
-                            </li>
-                            <li className="nav-item">
-                                <img src={Sell} alt="Left Nav Item 3" />
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div className="d-flex justify-content-center">
-                        <a className="navbar-brand" href="#">
-                            
-                        </a>
-                    </div>
-
-                    <div className="d-flex justify-content-end">
-                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <img src={Cart} alt="Right Nav Item 1" />
-                            </li>
-                            <li className="nav-item">
-                                <img src={User} alt="Right Nav Item 2" />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-
-        </div>
+        <section className="heading row">
+            <div className='col'>
+                <h1>T<img src={LightPeng} style={{ width: '4vw' }}></img>laan</h1>
+                <h3>An online hub of books written by Pinoys, <span style={{color: '#E49757', fontWeight: 'bold'}}>for Pinoys!</span></h3>
+                <button type="button">see more</button>
+            </div>
+            <div className='col'>
+                <img src={Element1} style={{width: '50vw'}}></img>
+            </div>
+        </section>
     )
 }
+
+{/* <div className='container-fluid row '>
+    <div className='col d-flex justify-content-center flex-column header'>
+        <h1 className='title' style={{ color: '#4A3724', fontSize: '9em' }}>T<img src={LightPeng} style={{ width: '63px' }}></img>laan</h1>
+        <div>
+            <h3 className='desc' style={{ color: '#6E8668', fontWeight: 'bold' }}>An online hub of books written by Pinoys,<ForPinoys className='forPinoys' style={{ alignItems: 'bottom' }} /></h3>
+
+        </div>
+        <button className='btn d-flex justify-content-around align-items-center' type="button">
+            <div className='m-0' style={{ verticalAlign: '100' }}>see more</div>
+            <img src={RightArrow} style={{ width: '7.5px' }}></img>
+        </button>
+    </div>
+    <div className='col'>
+        <img src={Element1}></img>
+    </div>
+</div> */}
